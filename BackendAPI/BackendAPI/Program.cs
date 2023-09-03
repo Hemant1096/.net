@@ -1,5 +1,10 @@
+using BackendAPI.Model;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<APIdbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Adb")));
 // Add services to the container.
 
 builder.Services.AddControllers();
