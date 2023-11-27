@@ -2,6 +2,7 @@ using BackendAPI.Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Configuration;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -49,7 +50,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
-IConfiguration configuration = app.Configuration;
+//IConfiguration configuration = app.Configuration;
 IWebHostEnvironment environment = app.Environment;
 
 app.MapControllers();

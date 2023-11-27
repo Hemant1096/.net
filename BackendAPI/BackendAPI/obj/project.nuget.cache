@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SQMPsGXGwnqSRUKEhZ9kizWDlAZdbey3hIxYi3tqYWQs2kiTEFt/JETaxYAur3tvWJjEAkUPbKaAo4XtFO2WxQ==",
+  "dgSpecHash": "p33XH9X78bjvf9XewR9DVapsOK9a3BDtnQyXzz1pZ1f3RsNwTyl2s7OZ0lPcsUBW7jjYYXQmewVEuLxnYUpwDg==",
   "success": true,
   "projectFilePath": "D:\\Projects\\.net\\BackendAPI\\BackendAPI\\BackendAPI.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\Hemant\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Hemant\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Hemant\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Hemant\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Hemant\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Hemant\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Hemant\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
