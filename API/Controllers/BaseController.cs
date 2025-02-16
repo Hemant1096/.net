@@ -18,7 +18,7 @@ namespace BackendAPI.Controllers
             dbContext = new APIdbContext();
         }
         [HttpPost("DemoAPI")]
-        public ActionResult printData(demoviewmodel demoviewmodel)
+        public ActionResult printData(Demoviewmodel demoviewmodel)
         {
             var data = demoviewmodel.name + " Lives in " + demoviewmodel.location;
             return Ok(data);
@@ -65,7 +65,7 @@ namespace BackendAPI.Controllers
             return Ok(data);
         }
     }
-    public class demoviewmodel
+    public class Demoviewmodel
     {
         public string? name { get; set; }
         public string? location { get; set; }
