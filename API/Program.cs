@@ -1,5 +1,6 @@
 using BackendAPI.Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Configuration;
@@ -7,11 +8,18 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+//    .AddEntityFrameworkStores<APIdbContext>()
+//    .AddDefaultTokenProviders();
+
 builder.Services.AddDbContext<APIdbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Adb")!));
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<APIdbContext>()
+    .AddDefaultTokenProviders();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -32,7 +40,7 @@ builder.Services.AddAuthentication(options =>
         ValidateLifetime = false,
         ValidateIssuerSigningKey = true
     };
-});
+}).AddCookie(IdentityConstants.ApplicationScheme);
 builder.Services.AddAuthorization();
 // Add configuration from appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
