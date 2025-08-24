@@ -1,5 +1,4 @@
 ﻿using BackendAPI.Model;
-using BackendAPI.Models;
 using BackendAPI.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +12,10 @@ namespace BackendAPI.Controllers
     [ApiController]
     public class BaseController : ControllerBase
     {
-        private readonly digiWarrenContext dbContext;
+        private readonly APIdbContext dbContext;
         public BaseController() 
         {
-            dbContext = new digiWarrenContext();
+            dbContext = new APIdbContext();
         }
         [HttpPost("DemoAPI")]
         public ActionResult printData(Demoviewmodel demoviewmodel)

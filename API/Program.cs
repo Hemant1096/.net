@@ -1,4 +1,5 @@
 using BackendAPI.Model;
+using BackendAPI.ViewModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +18,7 @@ builder.Services.AddDbContext<APIdbContext>(options =>
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<RegisterViewModel, IdentityRole>()
     .AddEntityFrameworkStores<APIdbContext>()
     .AddDefaultTokenProviders();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -40,7 +41,7 @@ builder.Services.AddAuthentication(options =>
         ValidateLifetime = false,
         ValidateIssuerSigningKey = true
     };
-}).AddCookie(IdentityConstants.ApplicationScheme);
+});//.AddCookie(IdentityConstants.ApplicationScheme);
 builder.Services.AddAuthorization();
 // Add configuration from appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
